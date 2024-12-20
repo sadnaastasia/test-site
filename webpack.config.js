@@ -18,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s(a|c)ss$/,
+        test: /\.(scss)$/,
         use: [
           {
             // Adds CSS to the DOM by injecting a `<style>` tag
