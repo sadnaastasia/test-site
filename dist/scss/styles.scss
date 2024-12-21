@@ -29,7 +29,7 @@
   @include new-button(#fff, #343a40, solid #ced4da, 2px 8px);
 }
 .menu-button:hover {
-  @include new-button(#fff, #343a40, solid #63686e, 2px 8px);
+  @include new-button(#fff, #343a40, 0.2rem solid #63686e, 2px 8px);
 }
 
 $danger: rgb(173, 21, 21);
