@@ -1,15 +1,37 @@
 @import '../../node_modules/bootstrap/scss/functions';
 
-$border-radius: 0.1rem 1.9rem 0.1rem 1.9rem;
-@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
-  @if $enable-rounded {
-    border-radius: valid-radius($radius);
-  } @else if $fallback-border-radius != false {
-    border-radius: $fallback-border-radius;
-  }
+@mixin new-button(
+  $background-color,
+  $text-color,
+  $border: none,
+  $padding: 8px 16px
+) {
+  background-color: $background-color;
+  color: $text-color;
+  border-radius: 0.1rem 1.9rem 0.1rem 1.9rem;
+  border: $border;
+  padding: $padding;
 }
 
-$success: rgb(118, 10, 118);
+.primary-button {
+  @include new-button(#0d6efd, #fff);
+}
+.primary-button:hover {
+  @include new-button(#0f64e3, #fff);
+}
+.purple-button {
+  @include new-button(#6f42c1, #fff);
+}
+.purple-button:hover {
+  @include new-button(#6237b3, #fff);
+}
+.menu-button {
+  @include new-button(#fff, #343a40, solid #ced4da, 2px 8px);
+}
+.menu-button:hover {
+  @include new-button(#fff, #343a40, solid #63686e, 2px 8px);
+}
+
 $danger: rgb(173, 21, 21);
 
 // Required
